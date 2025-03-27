@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windows Tips & Tricks - Tech Tips Hub</title>
+    <title>Windows Tips - Tech Tips Hub</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
         body {
@@ -38,7 +38,7 @@
         .navbar a:hover { background: #0056b3; }
 
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 50px auto;
             padding: 20px;
             background: #1e1e1e;
@@ -48,118 +48,158 @@
 
         h1 { color: #00aaff; }
 
-        .tip-section {
-            background: #252525;
-            border-left: 5px solid #007bff;
-            padding: 10px 15px;
+        .switch-button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #007bff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .switch-button:hover { background: #0056b3; }
+
+        .tips-container {
+            text-align: left;
+            padding: 20px;
+        }
+
+        .tip {
+            background: #2a2a2a;
+            padding: 15px;
             margin: 10px 0;
             border-radius: 10px;
-            text-align: left;
-            cursor: pointer;
-            transition: 0.3s;
+            box-shadow: 0px 2px 5px rgba(255, 255, 255, 0.1);
         }
 
-        .tip-section:hover {
-            background: #2f2f2f;
-        }
-
-        .tip-content {
-            display: none;
-            padding-top: 10px;
-            color: #cccccc;
-        }
-
-        .tip-title {
-            font-size: 18px;
-            font-weight: bold;
+        .tip h3 {
+            margin: 0;
             color: #00aaff;
         }
 
+        .tip p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #dddddd;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
+    <!-- Navigation Strip -->
     <div class="navbar">
         <a href="index.html">Home</a>
         <a href="tips.html">Tips</a>
         <a href="about.html">About</a>
     </div>
 
-    <!-- Tips Section -->
+    <!-- Content -->
     <div class="container">
         <h1>Windows Tips & Tricks</h1>
-        
-        <!-- Tip 1 - 30 -->
-        <div class="tip-section" onclick="toggleTip(1)">
-            <div class="tip-title">1. Use Windows Key + V for Clipboard History</div>
-            <div class="tip-content" id="tip1">Enable Clipboard History in Settings to access multiple copied items.</div>
+        <button class="switch-button" onclick="toggleTips()">Switch to Windows 10 Tips</button>
+
+        <!-- Windows 11 Tips -->
+        <div id="win11-tips" class="tips-container">
+            <div class="tip"><h3>1. Snap Layouts</h3><p>Press <b>Win + Z</b> to snap windows into a layout.</p></div>
+            <div class="tip"><h3>2. Focus Mode</h3><p>Use Focus Assist from Quick Settings to reduce distractions.</p></div>
+            <div class="tip"><h3>3. Virtual Desktops</h3><p>Press <b>Win + Tab</b> to create and switch desktops.</p></div>
+            <div class="tip"><h3>4. Tabbed File Explorer</h3><p>Use tabs in File Explorer for better organization.</p></div>
+            <div class="tip"><h3>5. New Quick Settings</h3><p>Press <b>Win + A</b> for Wi-Fi, Bluetooth, and volume controls.</p></div>
+            <div class="tip"><h3>6. Widgets Panel</h3><p>Press <b>Win + W</b> to view news, weather, and reminders.</p></div>
+            <div class="tip"><h3>7. Redesigned Start Menu</h3><p>Customize pinned apps and recommended files.</p></div>
+            <div class="tip"><h3>8. Auto HDR</h3><p>Enable Auto HDR for enhanced game visuals.</p></div>
+            <div class="tip"><h3>9. Dynamic Refresh Rate</h3><p>Enable it for smoother scrolling and gaming.</p></div>
+            <div class="tip"><h3>10. Android Apps Support</h3><p>Install Android apps from the Microsoft Store.</p></div>
+            <div class="tip"><h3>11. Improved Clipboard</h3><p>Press Win + V for clipboard history.</p></div>
+            <div class="tip"><h3>12. Android Apps</h3><p>Run Android apps natively via Amazon App Store.</p></div>
+            <div class="tip"><h3>13. Voice Typing</h3><p>Press Win + H to use voice typing.</p></div>
+            <div class="tip"><h3>14. Updated Microsoft Store</h3><p>Find more apps and better performance.</p></div>
+            <div class="tip"><h3>15. Better Window Management</h3><p>Hover over maximize button for snap options.</p></div>
+            <div class="tip"><h3>16. Bluetooth Quick Connect</h3><p>Manage Bluetooth devices from Quick Settings.</p></div>
+            <div class="tip"><h3>17. Auto Dark Mode</h3><p>Schedule dark/light mode automatically.</p></div>
+            <div class="tip"><h3>18. Terminal App</h3><p>Windows Terminal supports multiple shells.</p></div>
+            <div class="tip"><h3>19. File Explorer Context Menu</h3><p>New modern context menu for faster access.</p></div>
+            <div class="tip"><h3>20. Teams Integration</h3><p>Chat directly from the taskbar.</p></div>
+            <div class="tip"><h3>21. Touch Keyboard Improvements</h3><p>Customize layout & themes.</p></div>
+            <div class="tip"><h3>22. Redesigned Settings App</h3><p>Easier navigation with categories.</p></div>
+            <div class="tip"><h3>23. Snap Groups</h3><p>Restore grouped apps easily.</p></div>
+            <div class="tip"><h3>24. More Control over Updates</h3><p>Pause updates for longer durations.</p></div>
+            <div class="tip"><h3>25. Enhanced Search</h3><p>Find files faster with cloud search.</p></div>
+            <div class="tip"><h3>26. Emoji Panel</h3><p>Press Win + . to access emojis & GIFs.</p></div>
+            <div class="tip"><h3>27. Redesigned Lock Screen</h3><p>More personalization options.</p></div>
+            <div class="tip"><h3>28. Windows Sandbox</h3><p>Run suspicious files in an isolated environment.</p></div>
+            <div class="tip"><h3>29. Power Efficiency</h3><p>Better power management options.</p></div>
+            <div class="tip"><h3>30. Secure Boot</h3><p>Enhanced security against malware.</p></div>
         </div>
 
-        <div class="tip-section" onclick="toggleTip(2)">
-            <div class="tip-title">2. Shake to Minimize</div>
-            <div class="tip-content" id="tip2">Click and hold the title bar of a window, then shake it to minimize all other windows.</div>
+        <!-- Windows 10 Tips -->
+        <div id="win10-tips" class="tips-container" style="display: none;">
+            <div class="tip"><h3>1. Shake to Minimize</h3><p>Click and shake a window to minimize others.</p></div>
+            <div class="tip"><h3>2. Hidden Start Menu</h3><p>Right-click Start for quick settings.</p></div>
+            <div class="tip"><h3>3. Clipboard History</h3><p>Press <b>Win + V</b> to see copied items.</p></div>
+            <div class="tip"><h3>4. Dark Mode</h3><p>Enable in Settings > Personalization > Colors.</p></div>
+            <div class="tip"><h3>5. Game Mode</h3><p>Optimize performance with Game Mode.</p></div>
+            <div class="tip"><h3>6. Nearby Sharing</h3><p>Share files wirelessly.</p></div>
+            <div class="tip"><h3>7. Snipping Tool Shortcut</h3><p>Press <b>Win + Shift + S</b> for screenshots.</p></div>
+            <div class="tip"><h3>8. Storage Sense</h3><p>Enable Storage Sense to auto-free space.</p></div>
+            <div class="tip"><h3>9. Virtual Desktop</h3><p>Press <b>Win + Ctrl + D</b> for a new desktop.</p></div>
+            <div class="tip"><h3>10. PowerToys</h3><p>Install PowerToys for extra features.</p></div>
+            <div class="tip"><h3>1. Enable Dark Mode</h3><p>Change under <code>Settings > Colors</code>.</p></div>
+            <div class="tip"><h3>2. Manage Startup Apps</h3><p>Open Task Manager & go to Startup tab.</p></div>
+            <div class="tip"><h3>3. Windows Sandbox</h3><p>Use for testing suspicious apps (Pro & Enterprise only).</p></div>
+            <div class="tip"><h3>4. Game Mode</h3><p>Improves gaming performance under settings.</p></div>
+            <div class="tip"><h3>5. Task Manager Shortcut</h3><p>Press <code>Ctrl + Shift + Esc</code> to open instantly.</p></div>
+            <div class="tip"><h3>6. Dynamic Lock</h3><p>Auto-locks PC when Bluetooth device disconnects.</p></div>
+            <div class="tip"><h3>7. Snipping Tool Shortcut</h3><p>Press <code>Win + Shift + S</code> for screenshots.</p></div>
+            <div class="tip"><h3>8. Emoji Picker</h3><p>Press <code>Win + .</code> to open emojis.</p></div>
+            <div class="tip"><h3>9. Fast Boot</h3><p>Enable under <code>Control Panel > Power Options</code>.</p></div>
+            <div class="tip"><h3>10. Hidden Start Menu</h3><p>Right-click Start button for shortcuts.</p></div>
+            <div class="tip"><h3>11. Command Prompt Shortcut</h3><p>Open with <code>Win + X</code>, then press C.</p></div>
+            <div class="tip"><h3>12. Restart Graphics Driver</h3><p>Press <code>Win + Ctrl + Shift + B</code> to reset.</p></div>
+            <div class="tip"><h3>13. Windows Defender Offline Scan</h3><p>Run via <code>Settings > Update & Security > Windows Security</code>.</p></div>
+            <div class="tip"><h3>14. Change Default Apps</h3><p>Set preferred apps via <code>Settings > Apps > Default apps</code>.</p></div>
+            <div class="tip"><h3>15. Adjust Text Size</h3><p>Go to <code>Settings > Ease of Access > Display</code>.</p></div>
+            <div class="tip"><h3>16. Speed Up Boot Time</h3><p>Disable unnecessary startup programs in Task Manager.</p></div>
+            <div class="tip"><h3>17. Reset PC</h3><p>Go to <code>Settings > Update & Security > Recovery</code> to reset.</p></div>
+            <div class="tip"><h3>18. Use Windows Key Shortcuts</h3><p>Try <code>Win + X</code>, <code>Win + L</code>, <code>Win + I</code>.</p></div>
+            <div class="tip"><h3>19. Restore Lost Files</h3><p>Use the <code>Windows File Recovery</code> tool.</p></div>
+            <div class="tip"><h3>20. Virtual Desktops</h3><p>Use <code>Win + Tab</code> to create and manage virtual desktops.</p></div>
+            <div class="tip"><h3>21. Clipboard History</h3><p>Enable via <code>Settings > System > Clipboard</code>, then use <code>Win + V</code>.</p></div>
+            <div class="tip"><h3>22. Background App Control</h3><p>Manage apps via <code>Settings > Privacy > Background apps</code>.</p></div>
+            <div class="tip"><h3>23. Night Light</h3><p>Reduce blue light via <code>Settings > System > Display</code>.</p></div>
+            <div class="tip"><h3>24. Run Programs as Admin Quickly</h3><p>Press <code>Ctrl + Shift</code> while opening an app.</p></div>
+            <div class="tip"><h3>25. Secret God Mode</h3><p>Create a folder named <code>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</code>.</p></div>
+            <div class="tip"><h3>26. File Explorer Tabs</h3><p>Use <code>Ctrl + T</code> to open new tabs.</p></div>
+            <div class="tip"><h3>27. Screenshot a Specific Window</h3><p>Use <code>Alt + Print Screen</code> to capture the active window.</p></div>
+            <div class="tip"><h3>28. Taskbar Search Enhancements</h3><p>Enable enhanced search via <code>Settings > Search > Searching Windows</code>.</p></div>
+            <div class="tip"><h3>29. Battery Saver Mode</h3><p>Turn on via <code>Settings > System > Battery</code>.</p></div>
+            <div class="tip"><h3>30. Find Wi-Fi Password</h3><p>Run <code>netsh wlan show profile "WiFi-Name" key=clear</code> in CMD.</p></div>
         </div>
 
-        <div class="tip-section" onclick="toggleTip(3)">
-            <div class="tip-title">3. Snap Windows with Windows + Arrow Keys</div>
-            <div class="tip-content" id="tip3">Use Windows + Left/Right arrow to snap a window to half the screen.</div>
         </div>
-
-        <div class="tip-section" onclick="toggleTip(4)">
-            <div class="tip-title">4. Enable Dark Mode</div>
-            <div class="tip-content" id="tip4">Go to Settings > Personalization > Colors and choose Dark Mode.</div>
-        </div>
-
-        <div class="tip-section" onclick="toggleTip(5)">
-            <div class="tip-title">5. Use Virtual Desktops</div>
-            <div class="tip-content" id="tip5">Press Windows + Tab and create multiple desktops for better multitasking.</div>
-        </div>
-
-        <!-- More tips up to 30 -->
-        <!-- Add more sections here following the same structure -->
-
-        <h2 style="color: #00aaff; margin-top: 30px;">More Advanced Tips</h2>
-
-        <!-- Tip 31 - 60 -->
-        <div class="tip-section" onclick="toggleTip(31)">
-            <div class="tip-title">31. Open Task Manager Quickly</div>
-            <div class="tip-content" id="tip31">Press Ctrl + Shift + Esc to open Task Manager directly.</div>
-        </div>
-
-        <div class="tip-section" onclick="toggleTip(32)">
-            <div class="tip-title">32. Use Focus Assist</div>
-            <div class="tip-content" id="tip32">Enable Focus Assist from the Action Center to block notifications while working.</div>
-        </div>
-
-        <div class="tip-section" onclick="toggleTip(33)">
-            <div class="tip-title">33. Open Settings with a Shortcut</div>
-            <div class="tip-content" id="tip33">Press Windows + I to open the Settings app instantly.</div>
-        </div>
-
-        <div class="tip-section" onclick="toggleTip(34)">
-            <div class="tip-title">34. Find Large Files Easily</div>
-            <div class="tip-content" id="tip34">Use Windows Explorer search with `size:>100MB` to find large files quickly.</div>
-        </div>
-
-        <div class="tip-section" onclick="toggleTip(35)">
-            <div class="tip-title">35. Type Faster with Voice Typing</div>
-            <div class="tip-content" id="tip35">Press Windows + H to enable voice typing in Windows 10 and 11.</div>
-        </div>
-
-        <!-- More tips up to 60 -->
-        <!-- Add more sections here following the same structure -->
 
     </div>
 
     <script>
-        function toggleTip(num) {
-            let tip = document.getElementById('tip' + num);
-            if (tip.style.display === 'block') {
-                tip.style.display = 'none';
+        function toggleTips() {
+            let win11Tips = document.getElementById("win11-tips");
+            let win10Tips = document.getElementById("win10-tips");
+            let button = document.querySelector(".switch-button");
+
+            if (win11Tips.style.display === "none") {
+                win11Tips.style.display = "block";
+                win10Tips.style.display = "none";
+                button.textContent = "Switch to Windows 10 Tips";
             } else {
-                tip.style.display = 'block';
+                win11Tips.style.display = "none";
+                win10Tips.style.display = "block";
+                button.textContent = "Switch to Windows 11 Tips";
             }
         }
     </script>
+
 </body>
 </html>
