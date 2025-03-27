@@ -1,30 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Tips Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body { font-family: 'Poppins', sans-serif; text-align: center; background: #121212; color: white; margin: 0; padding: 0; transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background: #1e1e1e; border-radius: 10px; box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); }
+        h1, h2 { color: #00aaff; }
+        .button { background: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; margin: 10px; text-decoration: none; display: inline-block; }
+        .button:hover { background: #0056b3; }
+        .dark-mode { background: white; color: black; }
+        .dark-mode .container { background: #f0f0f0; color: black; }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Tech Tips Hub</h1>
-        <button id="dark-mode-toggle">🌙</button>
-    </header>
-    
-    <main>
-        <h2>Welcome to Tech Tips Hub</h2>
-        <p>Discover lesser-known Windows tricks to boost your productivity!</p>
-        <nav>
-            <a href="tips.html" class="btn">View Tips</a>
-            <a href="about.html" class="btn">About</a>
-        </nav>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 Tech Tips Hub</p>
-    </footer>
+    <div class="container">
+        <h1>Welcome to Tech Tips Hub</h1>
+        <p>Discover hidden shortcuts & tricks to boost your productivity!</p>
+        <a href="tips.html" class="button">View Tips</a>
+        <a href="about.html" class="button">About</a>
+        <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
