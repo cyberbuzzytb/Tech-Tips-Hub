@@ -1,70 +1,111 @@
-/* General Styles */
-* {
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-body {
-    background-color: #f0f0f0;
-    color: #333;
-    text-align: center;
-    padding: 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
+/* Navbar */
+.navbar {
+    background: #282828;
     padding: 15px;
-    border-radius: 10px;
+    text-align: center;
+    border-bottom: 3px solid #0078D7;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
-h1 {
-    font-size: 24px;
-}
-
-/* Dark Mode Toggle */
-#dark-mode-toggle {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Main Section */
-main {
-    margin-top: 50px;
-}
-
-h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 10px 20px;
-    background: black;
+.navbar a {
     color: white;
     text-decoration: none;
-    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 18px;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: gray;
+.navbar a:hover {
+    color: #0078D7;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background-color: #222;
+/* Content Styling */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* Toggle Buttons */
+.toggle-container {
+    margin: 20px 0;
+    padding: 15px;
+    background: #282828;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.toggle-container h2 {
+    margin-bottom: 10px;
+}
+
+.toggle-container button {
+    background: #0078D7;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle-container button:hover {
+    background: #005A9E;
+}
+
+/* Tips Section */
+.tips-section {
+    display: none;
+    text-align: left;
+    max-width: 700px;
+    margin: auto;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 120, 215, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tips-section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.tips-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tips-section li {
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+    transition: all 0.2s ease-in-out;
+}
+
+.tips-section li:hover {
+    color: #0078D7;
+    transform: scale(1.02);
+}
+
+/* Code Formatting */
+code {
+    background: #333;
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-family: "Courier New", monospace;
 }
