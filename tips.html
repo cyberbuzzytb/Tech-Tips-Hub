@@ -6,27 +6,130 @@
     <title>Tech Tips Hub - Tips</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
-        body { font-family: 'Poppins', sans-serif; background: #121212; color: white; margin: 0; padding: 0; transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
-        .container { max-width: 800px; margin: 50px auto; padding: 20px; background: #1e1e1e; border-radius: 10px; box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); text-align: center; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
         h1 { color: #00aaff; }
-        .tips-container { display: flex; justify-content: space-between; align-items: center; padding: 20px; }
-        .tips-section { width: 45%; padding: 20px; background: #252525; border-radius: 10px; transition: transform 0.5s ease-in-out; }
-        .hidden { transform: translateX(-100%); opacity: 0; }
-        .switch-button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+
+        .tips-container {
+            position: relative;
+            overflow: hidden;
+            height: auto;
+        }
+
+        .tips-section {
+            width: 100%;
+            padding: 20px;
+            background: #252525;
+            border-radius: 10px;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            position: absolute;
+        }
+
+        .hidden {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        .switch-button {
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-bottom: 10px;
+        }
+
         .switch-button:hover { background: #0056b3; }
-        .sidebar { position: fixed; top: 0; left: -200px; width: 200px; height: 100%; background: #1e1e1e; padding-top: 60px; transition: 0.3s; }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -220px;
+            width: 220px;
+            height: 100%;
+            background: #1e1e1e;
+            padding-top: 60px;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
         .sidebar.active { left: 0; }
-        .sidebar a { display: block; padding: 15px; color: white; text-decoration: none; transition: 0.3s; }
+
+        .sidebar a {
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
         .sidebar a:hover { background: #333; }
-        .menu-btn { position: fixed; top: 20px; left: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+        .menu-btn {
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 20;
+        }
+
+        .menu-icon {
+            display: grid;
+            grid-template-columns: repeat(3, 8px);
+            gap: 3px;
+        }
+
+        .menu-icon div {
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        ul { text-align: left; }
     </style>
 </head>
 <body>
-    <button class="menu-btn" onclick="toggleMenu()">\u22ee\u22ee\u22ee</button>
+    <!-- Sidebar Toggle Button -->
+    <button class="menu-btn" onclick="toggleMenu()">
+        <div class="menu-icon">
+            <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div>
+        </div>
+    </button>
+
+    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
     </div>
+
+    <!-- Main Content -->
     <div class="container">
         <h1>Windows Tips</h1>
         <button class="switch-button" onclick="switchTips()">Switch to Windows 11 Tips</button>
@@ -37,13 +140,32 @@
                     <li>Windows Key + S: Opens the Search bar.</li>
                     <li>Windows Key + E: Opens File Explorer.</li>
                     <li>Windows Key + Tab: Opens Task View.</li>
-                    <li>Windows Key + D: Hides or unhides the desktop.</li>
+                    <li>Windows Key + D: Shows the desktop.</li>
                     <li>Windows Key + M: Minimizes all windows.</li>
-                    <li>Windows Key + Up Arrow: Maximizes the current window.</li>
-                    <li>Windows Key + Down Arrow: Minimizes the current window.</li>
                     <li>Ctrl + Shift + Esc: Opens Task Manager.</li>
-                    <li>Alt + Tab: Switch between open applications.</li>
+                    <li>Alt + Tab: Switch between open apps.</li>
                     <li>Windows Key + L: Lock your computer.</li>
+                    <li>Windows Key + R: Opens Run dialog.</li>
+                    <li>Windows Key + P: Opens Project screen.</li>
+                    <li>Windows Key + I: Opens Settings.</li>
+                    <li>Windows Key + X: Opens Quick Link menu.</li>
+                    <li>Windows Key + Number (1-9): Opens pinned taskbar apps.</li>
+                    <li>Windows Key + G: Opens Xbox Game Bar.</li>
+                    <li>Windows Key + Shift + Left/Right: Moves window between monitors.</li>
+                    <li>Ctrl + Shift + N: Creates a new folder.</li>
+                    <li>Alt + F4: Closes the active window.</li>
+                    <li>Windows Key + Ctrl + D: Creates a new virtual desktop.</li>
+                    <li>Windows Key + Ctrl + Left/Right: Switches between virtual desktops.</li>
+                    <li>Windows Key + Spacebar: Switches input language.</li>
+                    <li>Windows Key + H: Activates voice dictation.</li>
+                    <li>Ctrl + A: Selects all items.</li>
+                    <li>Ctrl + C: Copies selected items.</li>
+                    <li>Ctrl + V: Pastes copied items.</li>
+                    <li>Ctrl + X: Cuts selected items.</li>
+                    <li>Ctrl + Z: Undoes last action.</li>
+                    <li>Ctrl + Y: Redoes last action.</li>
+                    <li>Windows Key + Print Screen: Takes a screenshot.</li>
+                    <li>Windows Key + Shift + S: Opens Snipping Tool.</li>
                 </ul>
             </div>
             <div class="tips-section hidden" id="win11">
@@ -52,24 +174,31 @@
                     <li>Windows Key + C: Opens Microsoft Teams chat.</li>
                     <li>Windows Key + Z: Opens Snap Layouts.</li>
                     <li>Windows Key + A: Opens Quick Settings.</li>
-                    <li>Windows Key + N: Opens the Notification Center.</li>
+                    <li>Windows Key + N: Opens Notification Center.</li>
                     <li>Windows Key + H: Opens voice typing.</li>
-                    <li>Windows Key + K: Opens the Cast menu.</li>
+                    <li>Windows Key + K: Opens Cast menu.</li>
                     <li>Windows Key + Alt + R: Starts screen recording.</li>
                     <li>Windows Key + Shift + S: Opens Snipping Tool.</li>
-                    <li>Windows Key + Ctrl + Shift + B: Restarts your graphics driver.</li>
+                    <li>Windows Key + Ctrl + Shift + B: Restarts graphics driver.</li>
                     <li>Windows Key + Spacebar: Switch keyboard layouts.</li>
+                    <li>Windows Key + W: Opens Widgets panel.</li>
+                    <li>Windows Key + V: Opens Clipboard history.</li>
                 </ul>
             </div>
         </div>
     </div>
+
     <script>
         function switchTips() {
-            document.getElementById('win10').classList.toggle('hidden');
-            document.getElementById('win11').classList.toggle('hidden');
+            let win10 = document.getElementById('win10');
+            let win11 = document.getElementById('win11');
+            win10.classList.toggle('hidden');
+            win11.classList.toggle('hidden');
+
             let button = document.querySelector('.switch-button');
-            button.innerText = button.innerText.includes("10") ? "Switch to Windows 10 Tips" : "Switch to Windows 11 Tips";
+            button.innerText = win10.classList.contains('hidden') ? "Switch to Windows 10 Tips" : "Switch to Windows 11 Tips";
         }
+
         function toggleMenu() {
             document.getElementById('sidebar').classList.toggle('active');
         }
