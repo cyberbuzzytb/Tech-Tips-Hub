@@ -9,8 +9,8 @@
         body { 
             font-family: 'Poppins', sans-serif; 
             text-align: center; 
-            background: #ffffff; 
-            color: black; 
+            background: #121212; 
+            color: white; 
             margin: 0; 
             padding: 0; 
             transition: background 0.3s ease-in-out, color 0.3s ease-in-out; 
@@ -19,9 +19,9 @@
             max-width: 600px; 
             margin: 50px auto; 
             padding: 20px; 
-            background: #f0f0f0; 
+            background: #1e1e1e; 
             border-radius: 10px; 
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); 
         }
         h1, h2 { color: #00aaff; }
         .button { 
@@ -37,10 +37,10 @@
             display: inline-block; 
         }
         .button:hover { background: #0056b3; }
-        
-        /* Dark Mode */
-        .dark-mode { background: #121212; color: white; }
-        .dark-mode .container { background: #1e1e1e; color: white; }
+
+        /* Light Mode */
+        .light-mode { background: white; color: black; }
+        .light-mode .container { background: #f0f0f0; color: black; }
 
         /* Floating Theme Toggle Button */
         .toggle-button {
@@ -55,8 +55,8 @@
         }
     </style>
 </head>
-<body>
-    <button class="toggle-button" onclick="toggleDarkMode()" id="theme-toggle">🌙</button>
+<body class="dark-mode"> <!-- Default to dark mode -->
+    <button class="toggle-button" onclick="toggleDarkMode()" id="theme-toggle">☀️</button>
 
     <div class="container">
         <h1>Welcome to Tech Tips Hub</h1>
@@ -70,13 +70,13 @@
             const body = document.body;
             const toggleButton = document.getElementById("theme-toggle");
 
-            body.classList.toggle("dark-mode");
+            body.classList.toggle("light-mode");
 
             // Change the emoji based on the theme
-            if (body.classList.contains("dark-mode")) {
-                toggleButton.textContent = "☀️"; // Sun for dark mode
+            if (body.classList.contains("light-mode")) {
+                toggleButton.textContent = "🌙"; // Moon for dark mode
             } else {
-                toggleButton.textContent = "🌙"; // Moon for light mode
+                toggleButton.textContent = "☀️"; // Sun for light mode
             }
         }
     </script>
