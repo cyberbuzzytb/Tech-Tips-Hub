@@ -3,209 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Tips Hub - Tips</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #121212;
-            color: white;
-            margin: 0;
-            padding: 0;
-            transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #1e1e1e;
-            border-radius: 15px; /* Smooth edges */
-            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-            text-align: center;
-            transition: 0.4s ease-in-out;
-        }
-
-        h1 { color: #00aaff; }
-
-        .tips-container {
-            position: relative;
-            height: auto;
-            margin-top: 20px;
-        }
-
-        .tips-section {
-            width: 100%;
-            padding: 20px;
-            background: #252525;
-            border-radius: 15px; /* Smooth edges */
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-        }
-
-        .hidden {
-            opacity: 0;
-            transform: scale(0.95);
-            pointer-events: none;
-            position: absolute;
-        }
-
-        .switch-button {
-            background: #007bff;
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s ease-in-out;
-            margin-bottom: 15px;
-        }
-
-        .switch-button:hover { background: #0056b3; }
-
-        /* Sidebar Styles */
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: -240px;
-            width: 240px;
-            height: 100%;
-            background: #1e1e1e;
-            padding-top: 60px;
-            transition: 0.5s ease-in-out;
-            box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.1);
-            border-radius: 0px 15px 15px 0px; /* Smooth edges */
-            z-index: 10;
-            opacity: 0;
-        }
-
-        .sidebar.active {
-            left: 0;
-            opacity: 1;
-        }
-
-        .sidebar a {
-            display: block;
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            transition: 0.3s ease-in-out;
-        }
-
-        .sidebar a:hover { background: #333; }
-
-        .menu-btn {
-            position: fixed;
-            top: 15px;
-            left: 15px;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            z-index: 20;
-            transition: 0.3s ease-in-out;
-        }
-
-        .menu-icon {
-            display: grid;
-            grid-template-columns: repeat(3, 8px);
-            gap: 3px;
-        }
-
-        .menu-icon div {
-            width: 8px;
-            height: 8px;
-            background: white;
-            border-radius: 50%;
-        }
-
-        ul { text-align: left; }
-    </style>
+    <title>Windows Tips & Tricks</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sidebar Toggle Button -->
-    <button class="menu-btn" onclick="toggleMenu()">
-        <div class="menu-icon">
-            <div></div> <div></div> <div></div>
-            <div></div> <div></div> <div></div>
-            <div></div> <div></div> <div></div>
-        </div>
-    </button>
 
-    <!-- Sidebar -->
-    <div class="sidebar" id="sidebar">
+    <!-- Navbar -->
+    <div class="navbar">
         <a href="index.html">Home</a>
+        <a href="tips.html">Windows Tips & Tricks</a>
         <a href="about.html">About</a>
     </div>
 
     <!-- Main Content -->
-    <div class="container">
-        <h1>Windows Tips</h1>
-        <button class="switch-button" onclick="switchTips()">Switch to Windows 11 Tips</button>
-        <div class="tips-container">
-            <div class="tips-section" id="win10">
-                <h2>Windows 10 Tips</h2>
-                <ul>
-                    <li>Windows Key + S: Opens the Search bar.</li>
-                    <li>Windows Key + E: Opens File Explorer.</li>
-                    <li>Windows Key + Tab: Opens Task View.</li>
-                    <li>Windows Key + D: Shows the desktop.</li>
-                    <li>Windows Key + M: Minimizes all windows.</li>
-                    <li>Ctrl + Shift + Esc: Opens Task Manager.</li>
-                    <li>Alt + Tab: Switch between open apps.</li>
-                    <li>Windows Key + L: Lock your computer.</li>
-                    <li>Windows Key + R: Opens Run dialog.</li>
-                    <li>Windows Key + P: Opens Project screen.</li>
-                    <li>Windows Key + I: Opens Settings.</li>
-                    <li>Windows Key + X: Opens Quick Link menu.</li>
-                    <li>Windows Key + Number (1-9): Opens pinned taskbar apps.</li>
-                    <li>Windows Key + G: Opens Xbox Game Bar.</li>
-                    <li>Windows Key + Shift + Left/Right: Moves window between monitors.</li>
-                    <li>Ctrl + Shift + N: Creates a new folder.</li>
-                    <li>Alt + F4: Closes the active window.</li>
-                    <li>Windows Key + Ctrl + D: Creates a new virtual desktop.</li>
-                    <li>Windows Key + Ctrl + Left/Right: Switches between virtual desktops.</li>
-                </ul>
-            </div>
-            <div class="tips-section hidden" id="win11">
-                <h2>Windows 11 Tips</h2>
-                <ul>
-                    <li>Windows Key + C: Opens Microsoft Teams chat.</li>
-                    <li>Windows Key + Z: Opens Snap Layouts.</li>
-                    <li>Windows Key + A: Opens Quick Settings.</li>
-                    <li>Windows Key + N: Opens Notification Center.</li>
-                    <li>Windows Key + H: Opens voice typing.</li>
-                    <li>Windows Key + K: Opens Cast menu.</li>
-                    <li>Windows Key + Alt + R: Starts screen recording.</li>
-                    <li>Windows Key + Shift + S: Opens Snipping Tool.</li>
-                    <li>Windows Key + Ctrl + Shift + B: Restarts graphics driver.</li>
-                    <li>Windows Key + Spacebar: Switch keyboard layouts.</li>
-                    <li>Windows Key + W: Opens Widgets panel.</li>
-                    <li>Windows Key + V: Opens Clipboard history.</li>
-                </ul>
-            </div>
+    <div class="content">
+        <h1>Windows Tips & Tricks</h1>
+        
+        <!-- Toggle Buttons -->
+        <div class="toggle-container">
+            <h2>Select Tips:</h2>
+            <button onclick="showWindows11()">Windows 11</button>
+            <button onclick="showWindows10()">Windows 10</button>
+        </div>
+
+        <!-- Windows 11 Tips Section -->
+        <div id="windows11Tips" class="tips-section">
+            <h2>Windows 11 Tips & Tricks</h2>
+            <ul>
+                <li><strong>Snap Layouts:</strong> Press <code>Win + Z</code> to quickly arrange windows.</li>
+                <li><strong>Voice Typing:</strong> Use <code>Win + H</code> to activate voice typing.</li>
+                <li><strong>Tabbed File Explorer:</strong> Open multiple tabs in File Explorer like a browser.</li>
+                <li><strong>Dark Mode:</strong> Enable from <code>Settings > Personalization > Colors</code>.</li>
+                <li><strong>Clipboard History:</strong> Use <code>Win + V</code> to access previous clipboard items.</li>
+            </ul>
+        </div>
+
+        <!-- Windows 10 Tips Section -->
+        <div id="windows10Tips" class="tips-section">
+            <h2>Windows 10 Tips & Tricks</h2>
+            <ul>
+                <li><strong>God Mode:</strong> Create a folder & name it <code>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</code>.</li>
+                <li><strong>Virtual Desktops:</strong> Press <code>Win + Ctrl + D</code> to create a new desktop.</li>
+                <li><strong>Shake to Minimize:</strong> Shake a window to minimize all others.</li>
+                <li><strong>Snipping Tool Shortcut:</strong> Press <code>Win + Shift + S</code> for screenshots.</li>
+                <li><strong>Task Manager:</strong> Open instantly with <code>Ctrl + Shift + Esc</code>.</li>
+            </ul>
         </div>
     </div>
 
     <script>
-        function switchTips() {
-            let win10 = document.getElementById('win10');
-            let win11 = document.getElementById('win11');
-
-            if (win10.classList.contains('hidden')) {
-                win10.classList.remove('hidden');
-                win11.classList.add('hidden');
-                document.querySelector('.switch-button').innerText = "Switch to Windows 11 Tips";
-            } else {
-                win10.classList.add('hidden');
-                win11.classList.remove('hidden');
-                document.querySelector('.switch-button').innerText = "Switch to Windows 10 Tips";
-            }
+        function showWindows11() {
+            document.getElementById('windows11Tips').style.display = 'block';
+            document.getElementById('windows10Tips').style.display = 'none';
         }
 
-        function toggleMenu() {
-            document.getElementById('sidebar').classList.toggle('active');
+        function showWindows10() {
+            document.getElementById('windows10Tips').style.display = 'block';
+            document.getElementById('windows11Tips').style.display = 'none';
         }
+
+        // Show Windows 11 tips by default
+        showWindows11();
     </script>
+
 </body>
 </html>
