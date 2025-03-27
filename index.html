@@ -3,93 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Tips Hub</title>
+    <title>Tech Tips Hub - Home</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            text-align: center;
             background: #121212;
             color: white;
             margin: 0;
             padding: 0;
-            transition: background 0.3s, color 0.3s, opacity 0.5s ease-in-out;
-            opacity: 0;
-            animation: fadeIn 0.5s forwards;
+            text-align: center;
+            transition: 0.3s ease-in-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
+        .navbar {
             background: #1e1e1e;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         }
 
-        h1, h2 { color: #00aaff; }
-
-        .button {
-            background: #007bff;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-            margin: 10px;
+        .navbar a {
             text-decoration: none;
-            display: inline-block;
+            color: white;
+            padding: 10px 20px;
+            background: #007bff;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
         }
 
-        .button:hover { background: #0056b3; }
+        .navbar a:hover { background: #0056b3; }
 
-        .toggle-mode {
-            position: fixed;
-            top: 15px;
-            right: 15px;
-            background: transparent;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
         }
 
-        .dark-mode {
-            background: white;
-            color: black;
-        }
-
-        .dark-mode .container {
-            background: #f0f0f0;
-            color: black;
-        }
+        h1 { color: #00aaff; }
     </style>
 </head>
 <body>
-    <button class="toggle-mode" onclick="toggleDarkMode()">🌙</button>
-    
-    <div class="container">
-        <h1>Welcome to Tech Tips Hub</h1>
-        <p>Discover hidden shortcuts & tricks to boost your productivity!</p>
-        <a href="tips.html" class="button">View Tips</a>
-        <a href="about.html" class="button">About</a>
+    <!-- Navigation Strip -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="tips.html">Tips</a>
+        <a href="about.html">About</a>
     </div>
 
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-            let button = document.querySelector(".toggle-mode");
-            if (document.body.classList.contains("dark-mode")) {
-                button.textContent = "☀️";
-            } else {
-                button.textContent = "🌙";
-            }
-        }
-    </script>
+    <!-- Content -->
+    <div class="container">
+        <h1>Welcome to Tech Tips Hub</h1>
+        <p>Your ultimate source for Windows tips and tricks!</p>
+    </div>
 </body>
 </html>
