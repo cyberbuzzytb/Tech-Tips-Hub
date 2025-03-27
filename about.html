@@ -6,15 +6,43 @@
     <title>About - Tech Tips Hub</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <style>
-        body { font-family: 'Poppins', sans-serif; text-align: center; background: #121212; color: white; margin: 0; padding: 0; transition: background 0.3s ease-in-out, color 0.3s ease-in-out; }
-        .container { max-width: 600px; margin: 50px auto; padding: 20px; background: #1e1e1e; border-radius: 10px; box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1); }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            text-align: center; 
+            background: #ffffff; 
+            color: black; 
+            margin: 0; 
+            padding: 0; 
+            transition: background 0.3s ease-in-out, color 0.3s ease-in-out; 
+        }
+        .container { 
+            max-width: 600px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            background: #f0f0f0; 
+            border-radius: 10px; 
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+        }
         h1, h2 { color: #00aaff; }
-        .button { background: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; margin: 10px; text-decoration: none; display: inline-block; }
+        .button { 
+            background: #007bff; 
+            color: white; 
+            padding: 10px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: 0.3s; 
+            margin: 10px; 
+            text-decoration: none; 
+            display: inline-block; 
+        }
         .button:hover { background: #0056b3; }
-        .dark-mode { background: white; color: black; }
-        .dark-mode .container { background: #f0f0f0; color: black; }
 
-        /* Floating Toggle Button */
+        /* Dark Mode */
+        .dark-mode { background: #121212; color: white; }
+        .dark-mode .container { background: #1e1e1e; color: white; }
+
+        /* Floating Theme Toggle Button */
         .toggle-button {
             position: fixed;
             top: 15px;
@@ -32,9 +60,9 @@
 
     <div class="container">
         <h1>About Tech Tips Hub</h1>
-        <p>Tech Tips Hub is your go-to source for Windows tricks and tips that enhance your experience and productivity.</p>
-        <p>We provide easy-to-follow tutorials, hidden shortcuts, and expert advice to help you master Windows.</p>
+        <p>This website is dedicated to sharing the best tech tips and tricks to enhance productivity.</p>
         <a href="index.html" class="button">Home</a>
+        <a href="tips.html" class="button">View Tips</a>
     </div>
 
     <script>
@@ -46,12 +74,11 @@
 
             // Change the emoji based on the theme
             if (body.classList.contains("dark-mode")) {
-                toggleButton.textContent = "☀️"; // Sun icon for dark mode
+                toggleButton.textContent = "☀️"; // Sun for dark mode
             } else {
-                toggleButton.textContent = "🌙"; // Moon icon for light mode
+                toggleButton.textContent = "🌙"; // Moon for light mode
             }
         }
     </script>
 </body>
 </html>
-
