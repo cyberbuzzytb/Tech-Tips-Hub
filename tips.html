@@ -20,42 +20,44 @@
             margin: 50px auto;
             padding: 20px;
             background: #1e1e1e;
-            border-radius: 10px;
+            border-radius: 15px; /* Smooth edges */
             box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
             text-align: center;
+            transition: 0.4s ease-in-out;
         }
 
         h1 { color: #00aaff; }
 
         .tips-container {
             position: relative;
-            overflow: hidden;
             height: auto;
+            margin-top: 20px;
         }
 
         .tips-section {
             width: 100%;
             padding: 20px;
             background: #252525;
-            border-radius: 10px;
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-            position: absolute;
+            border-radius: 15px; /* Smooth edges */
+            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
         }
 
         .hidden {
             opacity: 0;
-            transform: translateX(-100%);
+            transform: scale(0.95);
+            pointer-events: none;
+            position: absolute;
         }
 
         .switch-button {
             background: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
-            margin-bottom: 10px;
+            transition: 0.3s ease-in-out;
+            margin-bottom: 15px;
         }
 
         .switch-button:hover { background: #0056b3; }
@@ -64,23 +66,29 @@
         .sidebar {
             position: fixed;
             top: 0;
-            left: -220px;
-            width: 220px;
+            left: -240px;
+            width: 240px;
             height: 100%;
             background: #1e1e1e;
             padding-top: 60px;
-            transition: 0.3s;
+            transition: 0.5s ease-in-out;
+            box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.1);
+            border-radius: 0px 15px 15px 0px; /* Smooth edges */
             z-index: 10;
+            opacity: 0;
         }
 
-        .sidebar.active { left: 0; }
+        .sidebar.active {
+            left: 0;
+            opacity: 1;
+        }
 
         .sidebar a {
             display: block;
             padding: 15px;
             color: white;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
         }
 
         .sidebar a:hover { background: #333; }
@@ -95,6 +103,7 @@
             font-size: 24px;
             cursor: pointer;
             z-index: 20;
+            transition: 0.3s ease-in-out;
         }
 
         .menu-icon {
@@ -156,16 +165,6 @@
                     <li>Alt + F4: Closes the active window.</li>
                     <li>Windows Key + Ctrl + D: Creates a new virtual desktop.</li>
                     <li>Windows Key + Ctrl + Left/Right: Switches between virtual desktops.</li>
-                    <li>Windows Key + Spacebar: Switches input language.</li>
-                    <li>Windows Key + H: Activates voice dictation.</li>
-                    <li>Ctrl + A: Selects all items.</li>
-                    <li>Ctrl + C: Copies selected items.</li>
-                    <li>Ctrl + V: Pastes copied items.</li>
-                    <li>Ctrl + X: Cuts selected items.</li>
-                    <li>Ctrl + Z: Undoes last action.</li>
-                    <li>Ctrl + Y: Redoes last action.</li>
-                    <li>Windows Key + Print Screen: Takes a screenshot.</li>
-                    <li>Windows Key + Shift + S: Opens Snipping Tool.</li>
                 </ul>
             </div>
             <div class="tips-section hidden" id="win11">
@@ -192,11 +191,16 @@
         function switchTips() {
             let win10 = document.getElementById('win10');
             let win11 = document.getElementById('win11');
-            win10.classList.toggle('hidden');
-            win11.classList.toggle('hidden');
 
-            let button = document.querySelector('.switch-button');
-            button.innerText = win10.classList.contains('hidden') ? "Switch to Windows 10 Tips" : "Switch to Windows 11 Tips";
+            if (win10.classList.contains('hidden')) {
+                win10.classList.remove('hidden');
+                win11.classList.add('hidden');
+                document.querySelector('.switch-button').innerText = "Switch to Windows 11 Tips";
+            } else {
+                win10.classList.add('hidden');
+                win11.classList.remove('hidden');
+                document.querySelector('.switch-button').innerText = "Switch to Windows 10 Tips";
+            }
         }
 
         function toggleMenu() {
