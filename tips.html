@@ -8,96 +8,106 @@
         /* General Styling */
         body {
             font-family: Arial, sans-serif;
+            background-color: #0D1B2A;
+            color: #E0E1DD;
             margin: 0;
             padding: 0;
-            background-color: #1e1e1e;
-            color: #ffffff;
             text-align: center;
         }
 
-        /* Navbar Styling */
+        /* Navbar */
         .navbar {
-            background-color: #333;
-            overflow: hidden;
-            padding: 10px;
+            background-color: #1B263B;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         .navbar a {
-            color: white;
+            color: #E0E1DD;
             text-decoration: none;
-            padding: 14px 20px;
-            display: inline-block;
             font-size: 18px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
         }
 
         .navbar a:hover {
-            background-color: #575757;
-            border-radius: 5px;
+            background-color: #415A77;
         }
 
-        /* Content Styling */
+        /* Content */
         .content {
-            margin: 20px auto;
-            max-width: 800px;
             padding: 20px;
-            background: #252525;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
         }
 
         h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
+            color: #A9D6E5;
+            font-size: 32px;
+            margin-bottom: 20px;
         }
 
         h2 {
+            color: #7FC8F8;
             font-size: 24px;
-            margin-top: 20px;
+            margin-top: 30px;
         }
 
-        /* Button Styling */
+        /* Toggle Buttons */
+        .toggle-container {
+            margin: 20px 0;
+        }
+
         .toggle-container button {
-            background-color: #0078d4;
+            background-color: #468FAF;
             color: white;
             border: none;
             padding: 10px 15px;
-            margin: 10px;
             font-size: 16px;
+            margin: 5px;
             cursor: pointer;
             border-radius: 5px;
+            transition: 0.3s;
         }
 
         .toggle-container button:hover {
-            background-color: #005ea2;
+            background-color: #62B6CB;
         }
 
         /* Tips Sections */
         .tips-section {
             display: none;
-            text-align: left;
-            margin-top: 20px;
+            background-color: #1B263B;
             padding: 20px;
-            background-color: #333;
             border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
 
         ul {
-            list-style: none;
+            list-style-type: none;
             padding: 0;
         }
 
-        ul li {
-            background: #444;
-            margin: 8px 0;
+        li {
+            background-color: #415A77;
             padding: 10px;
+            margin: 5px 0;
             border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        li:hover {
+            background-color: #62B6CB;
         }
 
         code {
-            background: #555;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: monospace;
+            background-color: #0D1B2A;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -113,7 +123,7 @@
     <!-- Main Content -->
     <div class="content">
         <h1>Windows Tips & Tricks</h1>
-
+        
         <!-- Toggle Buttons -->
         <div class="toggle-container">
             <h2>Select Tips:</h2>
@@ -121,55 +131,55 @@
             <button onclick="showWindows10()">Windows 10</button>
         </div>
 
-        <!-- Windows 11 Tips Section -->
+        <!-- Windows 11 Tips -->
         <div id="windows11Tips" class="tips-section">
             <h2>Windows 11 Tips & Tricks</h2>
             <ul>
-                <li><strong>Snap Layouts:</strong> Press <code>Win + Z</code> to organize windows.</li>
-                <li><strong>Voice Typing:</strong> Press <code>Win + H</code> for voice input.</li>
-                <li><strong>Clipboard History:</strong> Press <code>Win + V</code> for copied items.</li>
-                <li><strong>Tabbed File Explorer:</strong> Use multiple tabs in Explorer.</li>
-                <li><strong>Widgets:</strong> Open with <code>Win + W</code> for news and weather.</li>
-                <li><strong>Auto HDR:</strong> Enhances game colors on supported displays.</li>
-                <li><strong>Dynamic Refresh Rate:</strong> Saves battery on high-refresh displays.</li>
-                <li><strong>Virtual Desktops:</strong> Press <code>Win + Ctrl + D</code> to create one.</li>
-                <li><strong>Dark Mode:</strong> Enable in <code>Settings > Personalization > Colors</code>.</li>
-                <li><strong>Task Manager Shortcut:</strong> Press <code>Ctrl + Shift + Esc</code>.</li>
-                <li><strong>Bluetooth Quick Pair:</strong> Faster pairing with supported devices.</li>
-                <li><strong>Battery Saver:</strong> Extend battery life under settings.</li>
-                <li><strong>File Explorer Quick Commands:</strong> Use <code>Ctrl + Shift + N</code> for a new folder.</li>
-                <li><strong>Storage Sense:</strong> Automate disk cleanup under settings.</li>
-                <li><strong>Touch Gestures:</strong> Improved multi-touch support.</li>
-                <li><strong>OneDrive Sync:</strong> Keeps files backed up automatically.</li>
-                <li><strong>Focus Mode:</strong> Use to minimize distractions.</li>
-                <li><strong>Taskbar Customization:</strong> Change taskbar alignment from settings.</li>
-                <li><strong>Live Captions:</strong> Real-time captions from accessibility settings.</li>
-                <li><strong>Remote Desktop:</strong> Use <code>Win + R</code> then type <code>mstsc</code>.</li>
-                <li><strong>Game Mode:</strong> Optimize performance under settings.</li>
-                <li><strong>DirectStorage:</strong> Improves game load times.</li>
-                <li><strong>Fast Window Switching:</strong> Use <code>Alt + Tab</code> for quick app changes.</li>
-                <li><strong>Restart Graphics Driver:</strong> Press <code>Win + Ctrl + Shift + B</code>.</li>
+                <li>Press <code>Win + Z</code> to access Snap Layouts.</li>
+                <li>Use <code>Win + H</code> for voice typing.</li>
+                <li>Tabbed File Explorer lets you manage multiple folders easily.</li>
+                <li>Enable Dark Mode from <code>Settings > Personalization > Colors</code>.</li>
+                <li>Press <code>Win + V</code> to see Clipboard History.</li>
+                <li>Check Widgets with <code>Win + W</code> for news, weather, and calendar.</li>
+                <li>Dynamic Refresh Rate improves battery life on high-refresh displays.</li>
+                <li>Use <code>Win + Ctrl + D</code> to create a new Virtual Desktop.</li>
+                <li>Focus Mode minimizes distractions in <code>Settings > Focus</code>.</li>
+                <li>Right-click the taskbar to customize it.</li>
+                <li>Live Captions help with real-time subtitles in videos.</li>
+                <li>Bluetooth Quick Pair makes connecting devices faster.</li>
+                <li>Use DirectStorage for faster game loading.</li>
+                <li>Storage Sense automates disk cleanup.</li>
+                <li>Press <code>Win + .</code> to quickly open the Emoji Panel.</li>
+                <li>Use <code>Alt + Tab</code> to switch between apps smoothly.</li>
+                <li>Night Light reduces blue light for better sleep.</li>
+                <li>OneDrive Sync automatically backs up your files.</li>
+                <li>Manage Startup Apps from the Task Manager.</li>
             </ul>
         </div>
 
-        <!-- Windows 10 Tips Section -->
+        <!-- Windows 10 Tips -->
         <div id="windows10Tips" class="tips-section">
             <h2>Windows 10 Tips & Tricks</h2>
             <ul>
-                <li><strong>God Mode:</strong> Create a folder named <code>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</code>.</li>
-                <li><strong>Shake to Minimize:</strong> Shake a window to minimize others.</li>
-                <li><strong>Clipboard History:</strong> Press <code>Win + V</code> to see copied items.</li>
-                <li><strong>Windows Timeline:</strong> Press <code>Win + Tab</code> to see past activities.</li>
-                <li><strong>Quick Screenshot:</strong> Use <code>Win + Shift + S</code> for snipping tool.</li>
-                <li><strong>Virtual Desktops:</strong> <code>Win + Ctrl + D</code> to create a new desktop.</li>
-                <li><strong>Battery Saver:</strong> Extend battery life under settings.</li>
-                <li><strong>Taskbar Search:</strong> Use <code>Win + S</code> to quickly find files or apps.</li>
-                <li><strong>Enable Dark Mode:</strong> Change under <code>Settings > Colors</code>.</li>
-                <li><strong>Manage Startup Apps:</strong> Open Task Manager & go to Startup tab.</li>
-                <li><strong>Snipping Tool Shortcut:</strong> Press <code>Win + Shift + S</code>.</li>
-                <li><strong>Hidden Start Menu:</strong> Right-click Start button for shortcuts.</li>
-                <li><strong>Speed Up Boot Time:</strong> Disable startup programs in Task Manager.</li>
-                <li><strong>Use Windows Key Shortcuts:</strong> Check <code>Win + X</code>, <code>Win + L</code>, <code>Win + I</code>.</li>
+                <li>Create a folder named <code>GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}</code> for advanced settings.</li>
+                <li>Shake a window to minimize all others.</li>
+                <li>Press <code>Win + V</code> to access Clipboard History.</li>
+                <li>Use <code>Win + Shift + S</code> for a quick screenshot.</li>
+                <li>Enable Dark Mode from <code>Settings > Personalization > Colors</code>.</li>
+                <li>Manage Startup Apps from the Task Manager.</li>
+                <li>Enable Windows Sandbox to safely test software.</li>
+                <li>Press <code>Ctrl + Shift + Esc</code> to open Task Manager instantly.</li>
+                <li>Use <code>Win + Ctrl + Shift + B</code> to restart the graphics driver.</li>
+                <li>Right-click the Start Menu for a hidden settings menu.</li>
+                <li>Night Light mode reduces blue light exposure.</li>
+                <li>Use <code>Win + X</code> for a quick admin menu.</li>
+                <li>Enable Game Mode to optimize performance.</li>
+                <li>Storage Sense automatically frees up disk space.</li>
+                <li>Use Windows Defender Offline Scan for deeper security scans.</li>
+                <li>Adjust Text Size from <code>Settings > Ease of Access > Display</code>.</li>
+                <li>Speed up boot time by disabling unnecessary startup programs.</li>
+                <li>Reset your PC from <code>Settings > Update & Security > Recovery</code>.</li>
+                <li>Restore lost files with the Windows File Recovery tool.</li>
             </ul>
         </div>
     </div>
