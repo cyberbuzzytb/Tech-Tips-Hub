@@ -13,19 +13,43 @@
         .button:hover { background: #0056b3; }
         .dark-mode { background: white; color: black; }
         .dark-mode .container { background: #f0f0f0; color: black; }
+
+        /* Floating Toggle Button */
+        .toggle-button {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
     </style>
 </head>
 <body>
+    <button class="toggle-button" onclick="toggleDarkMode()" id="theme-toggle">🌙</button>
+
     <div class="container">
         <h1>Welcome to Tech Tips Hub</h1>
         <p>Discover hidden shortcuts & tricks to boost your productivity!</p>
         <a href="tips.html" class="button">View Tips</a>
         <a href="about.html" class="button">About</a>
-        <button onclick="toggleDarkMode()" class="button">Toggle Dark Mode</button>
     </div>
+
     <script>
         function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
+            const body = document.body;
+            const toggleButton = document.getElementById("theme-toggle");
+
+            body.classList.toggle("dark-mode");
+
+            // Change the emoji based on the theme
+            if (body.classList.contains("dark-mode")) {
+                toggleButton.textContent = "☀️"; // Sun icon for dark mode
+            } else {
+                toggleButton.textContent = "🌙"; // Moon icon for light mode
+            }
         }
     </script>
 </body>
